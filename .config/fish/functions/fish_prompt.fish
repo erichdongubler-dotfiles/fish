@@ -9,7 +9,7 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     if not set -q __fish_git_prompt_color_branch
-        set -g __fish_git_prompt_color_branch magenta --bold
+        set -g __fish_git_prompt_color_branch white --dim
     end
     if not set -q __fish_git_prompt_showupstream
         set -g __fish_git_prompt_showupstream "informative"
@@ -41,7 +41,7 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     if not set -q __fish_git_prompt_color_dirtystate
-        set -g __fish_git_prompt_color_dirtystate blue
+        set -g __fish_git_prompt_color_dirtystate white --dim
     end
     if not set -q __fish_git_prompt_color_stagedstate
         set -g __fish_git_prompt_color_stagedstate yellow
