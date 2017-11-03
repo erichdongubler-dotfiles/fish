@@ -9,3 +9,5 @@ function __erichdongubler_fish_init --description "Initialize @erichdongubler's 
 end
 
 __erichdongubler_fish_init
+
+set fish_greeting
