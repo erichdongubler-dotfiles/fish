@@ -17,6 +17,8 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
+    echo
+
     # PWD
 
     set_color $color_cwd
