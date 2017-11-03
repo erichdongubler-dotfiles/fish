@@ -77,18 +77,24 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     # PWD
+
     set_color $color_cwd
     echo -n (prompt_pwd)
     set_color normal
 
-    printf '%s' (__fish_vcs_prompt)
-
-    if test $last_status -eq 0
-	set_color green
-    else
-        set_color yellow
+    set vcs_prompt (__fish_vcs_prompt)
+    if [ "$vcs_prompt" ]
+	printf '%s' "$vcs_prompt"
     end
 
-    echo -n " $suffix "
+    # Status-colored suffix
+
+    if test $last_status -eq 0
+	set_color brgreen
+    else
+        set_color bryellow
+    end
+
+    echo -n "$suffix "
     set_color normal
 end
